@@ -1,0 +1,16 @@
+name: CI
+
+# This tells GitHub WHEN to run the robot
+on:
+  push:
+    branches: [ "main" ]
+  # workflow_dispatch allows you to run this manually from the Actions tab
+  workflow_dispatch:
+
+# This tells GitHub WHAT the robot should do
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a simple test
+        run: echo "Hello, world! The workflow works."
